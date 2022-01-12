@@ -4,12 +4,62 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/text_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up Page"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="100px"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="68dp"
+        android:text="Sign Up Page"
+        android:textSize="45dp" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="match_parent"
+        android:layout_below="@id/text_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:hint="Username"
+        android:textSize="30dp"
+/>
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="28dp"
+        android:hint="Email"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="28dp"
+        android:hint="Password"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_password"
+        android:layout_centerHorizontal="true"
+        android:text="Sign up"
+        android:width="20dp"
+        android:layout_marginTop="100dp"
         />
+
 
 </RelativeLayout>
