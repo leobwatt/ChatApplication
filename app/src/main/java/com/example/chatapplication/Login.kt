@@ -17,6 +17,11 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        edt_email = findViewById(R.id.edt_email)
+        edt_password = findViewById(R.id.edt_password)
+        btn_login = findViewById(R.id.btn_login)
+        btn_sign_up = findViewById(R.id.btn_sign_up)
+
         btn_sign_up.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
