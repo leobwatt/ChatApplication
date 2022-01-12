@@ -7,9 +7,11 @@
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/btn_backround.xml" value="0.2203125" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/btn_corners.xml" value="0.2203125" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_login.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_sign_up.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/login.xml" value="0.22" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/signup.xml" value="0.2" />
+        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/signup.xml" value="0.1" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
       </map>
     </option>

@@ -6,16 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
+private lateinit var edt_email: EditText
+private lateinit var edt_password: EditText
+private lateinit var btn_login: Button
+private lateinit var btn_sign_up: Button
+
 class Login : AppCompatActivity() {
-
-    private lateinit var edt_email: EditText
-    private lateinit var edt_password: EditText
-    private lateinit var btn_login: Button
-    private lateinit var btn_sign_up: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login)
+        setContentView(R.layout.activity_login)
 
         edt_email = findViewById(R.id.edt_email)
         edt_password = findViewById(R.id.edt_password)
@@ -27,9 +26,6 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_login.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
     }
+
 }
