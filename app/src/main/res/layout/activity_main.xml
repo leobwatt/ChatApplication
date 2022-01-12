@@ -4,15 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFFF00"
+    >
+
 
     <TextView
+        android:id="@+id/text_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:textColor="#25F700"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="100px"
+        android:textSize="150px"
     />
+
+    <Button
+        android:id="@+id/btn_do_stuff"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="try button"
+        android:layout_below="@+id/text_hello"
+        android:layout_centerHorizontal="true"
+
+    />
+
+
 
 </RelativeLayout>
