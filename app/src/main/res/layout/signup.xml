@@ -3,25 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@mipmap/ic_launcher_foreground"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
-        android:layout_marginTop="68dp"
-        android:text="Sign Up Page"
-        android:textSize="45dp" />
+        android:layout_marginTop="50dp"
+        />
 
     <EditText
         android:id="@+id/edt_username"
         android:layout_width="match_parent"
-        android:layout_below="@id/text_sign_up"
+        android:layout_below="@id/app_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:hint="Username"
         android:textSize="30dp"
 />
@@ -51,14 +49,16 @@
         android:textSize="30dp" />
 
     <Button
+        android:background="@drawable/btn_corners"
+        android:backgroundTint="@color/light_blue"
         android:id="@+id/btn_sign_up"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edt_password"
         android:layout_centerHorizontal="true"
         android:text="Sign up"
-        android:width="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
         />
 
 
