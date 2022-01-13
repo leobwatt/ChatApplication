@@ -43,7 +43,7 @@ class Login : AppCompatActivity() {
 
     private fun login(email: String, password: String) {
 
-        mAuth.createUserWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
