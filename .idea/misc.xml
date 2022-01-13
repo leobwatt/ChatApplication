@@ -4,15 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/btn_backround.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/btn_corners.xml" value="0.2203125" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_sign_up.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/login.xml" value="0.22" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/signup.xml" value="0.1" />
+        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/signup.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3212962962962963" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3212962962962963" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17046605876393112" />
+        <entry key="app/src/main/res/layout/activity_message_menu.xml" value="0.17046605876393112" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.5911458333333334" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/signup.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/textmenu.xml" value="0.5911458333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3148148148148148" />
       </map>
     </option>
   </component>
