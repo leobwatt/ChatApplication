@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+//what is this?
 class UserAdapter(val context: Context, val userList: ArrayList<User>): RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -13,6 +14,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>): Recycler
         return UserViewHolder(view)
     }
 
+    //what
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
 
         val currentUser = userList[position]
@@ -21,6 +23,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>): Recycler
 
     }
 
+    //this function returns the amount of users on the app
     override fun getItemCount(): Int {
         return userList.size
     }

@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
 
+    //defining variables
     private lateinit var edt_email: EditText
     private lateinit var edt_password: EditText
     private lateinit var btn_login: Button
@@ -19,20 +20,24 @@ class Login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //sends user to activity_login
         setContentView(R.layout.activity_login)
 
         mAuth = FirebaseAuth.getInstance()
 
+        //why?
         edt_email = findViewById(R.id.edt_email)
         edt_password = findViewById(R.id.edt_password)
         btn_login = findViewById(R.id.btn_login)
         btn_sign_up = findViewById(R.id.btn_sign_up)
 
+        //if signup button is pressed, this will send user to sign up page
         btn_sign_up.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
 
+        //if login button is pressed, this will run the function login and see if user has an account
         btn_login.setOnClickListener {
             val email = edt_email.text.toString()
             val password = edt_password.text.toString()
@@ -47,6 +52,7 @@ class Login : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
+                    //sends user to MainActivity
                     val intent = Intent(this@Login, MainActivity::class.java)
                     startActivity(intent)
 
