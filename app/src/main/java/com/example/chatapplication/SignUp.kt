@@ -54,7 +54,7 @@ class SignUp : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //adds info to database
-                    addUserToDatabase(name, email, mAuth.currentUser.uid)
+                    addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
                     //sends user to MainActivity
                     val intent = Intent(this@SignUp, MainActivity::class.java)
                     startActivity(intent)
