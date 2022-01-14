@@ -7,9 +7,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
-
     //these are the text boxes and buttons
     private lateinit var edt_name: EditText
     private lateinit var edt_email: EditText
@@ -19,6 +20,7 @@ class SignUp : AppCompatActivity() {
 
     //this is what we call when we want to use Firebase authentication
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var mDbRef: DatabaseReference
 
     //this function runs once when the code is run
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +54,7 @@ class SignUp : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //adds info to database
-                    addUserToDatabase(name, email, mAuth.currentUser?.uid)
+                    addUserToDatabase(name, email, mAuth.currentUser.uid)
                     //sends user to MainActivity
                     val intent = Intent(this@SignUp, MainActivity::class.java)
                     startActivity(intent)
@@ -65,8 +67,12 @@ class SignUp : AppCompatActivity() {
             }
 
     }
+
+    private fun addUserToDatabase(name: String, email: String, uid: String) {
+        mDbRef = FirebaseDatabase.getInstance().getReference()
+
+        //adds a user to the database with a name, email, and uid
+        mDbRef.child("user").child(uid).setValue(User(name,email,uid))
+    }
 }
 
-private fun addUserToDatabase(name: String, email: String, vid: String) {
-
-}
