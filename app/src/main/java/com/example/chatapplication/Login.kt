@@ -3,10 +3,13 @@ package com.example.chatapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import android.view.View.OnKeyListener
 
 class Login : AppCompatActivity() {
 
@@ -37,32 +40,42 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //enter key thingy (not done at all)
+        //login button
         btn_login.setOnClickListener() {
             val email = edt_email.text.toString()
-            val password = edt_password.text.toString()
+            val password = edt_password.text.toString().trim()
 
-            login(email,password)
+            login(email, password)
         }
+
+        //enter key thingy (not done at all)
+        edt_password.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                //Perform Code
+                val email = edt_email.text.toString()
+                val password = edt_password.text.toString().trim()
+                login(email, password)
+            }
+            false
+        })
     }
 
     private fun login(email: String, password: String) {
 
-        mAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+    mAuth.signInWithEmailAndPassword(email, password)
+        .addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) {
 
-                    //sends user to MainActivity
-                    val intent = Intent(this@Login, MainActivity::class.java)
-                    finish()
-                    startActivity(intent)
+                //sends user to MainActivity
+                val intent = Intent(this@Login, MainActivity::class.java)
+                finish()
+                startActivity(intent)
 
-                } else {
+            } else {
 
-                    Toast.makeText(this@Login, "User not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Login, "User not found", Toast.LENGTH_SHORT).show()
 
-                }
             }
+        }
     }
-
 }

@@ -40,7 +40,7 @@ class SignUp : AppCompatActivity() {
             //this code runs when the signup button is pressed
             val name = edt_name.text.toString()
             val email = edt_email.text.toString()
-            val password = edt_password.text.toString()
+            val password = edt_password.text.toString().trim()
 
             //calls signUp function below
             signUp(name, email, password)
