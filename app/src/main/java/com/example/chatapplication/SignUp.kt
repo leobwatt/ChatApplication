@@ -58,6 +58,8 @@ class SignUp : AppCompatActivity() {
                         addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
                         //sends user to MainActivity
                         val intent = Intent(this@SignUp, MainActivity::class.java)
+                        //finish makes it so if the user presses the back button they go out of the app
+                        finish()
                         startActivity(intent)
 
                     } else {
