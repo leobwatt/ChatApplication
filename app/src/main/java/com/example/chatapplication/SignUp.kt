@@ -11,7 +11,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
-    //these are the text boxes and buttons
+    //these are the text boxes and buttonss
     private lateinit var edt_name: EditText
     private lateinit var edt_email: EditText
     private lateinit var edt_password: EditText
