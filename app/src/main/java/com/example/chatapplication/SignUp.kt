@@ -50,21 +50,27 @@ class SignUp : AppCompatActivity() {
     private fun signUp(name: String, email: String, password: String) {
 
         //signs up user
-        mAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    //adds info to database
-                    addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
-                    //sends user to MainActivity
-                    val intent = Intent(this@SignUp, MainActivity::class.java)
-                    startActivity(intent)
+        if (password.length > 3  && password.length < 20) {
+            mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        //adds info to database
+                        addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
+                        //sends user to MainActivity
+                        val intent = Intent(this@SignUp, MainActivity::class.java)
+                        startActivity(intent)
 
-                } else {
-                    //this runs if the code fails
-                    Toast.makeText(this@SignUp, "Error Occurred", Toast.LENGTH_SHORT).show()
+                    } else {
+                        //this runs if the code fails
+                        Toast.makeText(this@SignUp, "Error Occurred", Toast.LENGTH_SHORT).show()
 
+                    }
                 }
-            }
+        } else {
+            Toast.makeText(this@SignUp, "Passwords must be between 3-20 characters", Toast.LENGTH_SHORT).show()
+        }
+
+
 
     }
 
