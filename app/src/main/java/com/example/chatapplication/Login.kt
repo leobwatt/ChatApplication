@@ -25,7 +25,7 @@ class Login : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        //why?
+        //giving buttons and text boxes id
         edt_email = findViewById(R.id.edt_email)
         edt_password = findViewById(R.id.edt_password)
         btn_login = findViewById(R.id.btn_login)
@@ -54,6 +54,7 @@ class Login : AppCompatActivity() {
 
                     //sends user to MainActivity
                     val intent = Intent(this@Login, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
 
                 } else {
