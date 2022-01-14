@@ -37,8 +37,8 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //if login button is pressed, this will run the function login and see if user has an account
-        btn_login.setOnClickListener {
+        //enter key thingy (not done at all)
+        btn_login.setOnClickListener() {
             val email = edt_email.text.toString()
             val password = edt_password.text.toString()
 

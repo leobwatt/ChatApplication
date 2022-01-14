@@ -8,11 +8,11 @@
 
 <ImageView
     android:id="@+id/app_logo"
-    android:layout_width="220sp"
-    android:layout_height="220sp"
+    android:layout_width="190dp"
+    android:layout_height="190dp"
     android:src="@mipmap/ic_launcher_foreground"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="50sp"
+    android:layout_marginTop="10dp"
     />
 
 <EditText
@@ -24,7 +24,7 @@
     android:layout_marginRight="28sp"
     android:layout_height="wrap_content"
     android:hint="Name"
-    android:textSize="30sp"
+    android:textSize="20sp"
     />
 
 <EditText
@@ -34,10 +34,10 @@
     android:layout_below="@+id/edt_name"
     android:layout_centerHorizontal="true"
     android:layout_marginLeft="28sp"
-    android:layout_marginTop="20sp"
+    android:layout_marginTop="15dp"
     android:layout_marginRight="28sp"
     android:hint="Email"
-    android:textSize="30sp" />
+    android:textSize="20sp" />
 
 <EditText
     android:id="@+id/edt_password"
@@ -46,10 +46,10 @@
     android:layout_below="@+id/edt_email"
     android:layout_centerHorizontal="true"
     android:layout_marginLeft="28sp"
-    android:layout_marginTop="20sp"
+    android:layout_marginTop="15dp"
     android:layout_marginRight="28sp"
     android:hint="Password"
-    android:textSize="30sp" />
+    android:textSize="20sp" />
 
 <Button
     android:background="@drawable/btn_corners"
@@ -60,8 +60,8 @@
     android:layout_below="@id/edt_password"
     android:layout_centerHorizontal="true"
     android:text="Sign up"
-    android:textSize="25sp"
-    android:layout_marginTop="50sp"
+    android:textSize="20sp"
+    android:layout_marginTop="25sp"
     android:textColor="@color/black"
     />
 
