@@ -8,10 +8,7 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var userRecyclerView: RecyclerView
@@ -25,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mAuth = FirebaseAuth.getInstance()
+        mDbRef = FirebaseDatabase.getInstance().getReference()
 
         userList = ArrayList()
         adapter = UserAdapter(this, userList)
@@ -42,7 +40,10 @@ class MainActivity : AppCompatActivity() {
 
                     val currentUser = postSnapshot.getValue(User::class.java)
 
+                    if(mAuth.currentUser?.uid != currentUser?.uid) {
                         userList.add(currentUser!!)
+                    }
+
 
                 }
                 adapter.notifyDataSetChanged()

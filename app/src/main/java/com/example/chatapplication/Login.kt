@@ -62,13 +62,13 @@ class Login : AppCompatActivity() {
 
     private fun login(email: String, password: String) {
 
-    mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(email, password)
         .addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
 
                 //sends user to MainActivity
                 val intent = Intent(this@Login, MainActivity::class.java)
-                finish()
+                //finish()
                 startActivity(intent)
 
             } else {
