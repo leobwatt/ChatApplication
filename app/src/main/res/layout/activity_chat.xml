@@ -15,12 +15,18 @@
 
  />
 
-    <LinearLayout>
+    <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:ignore="ExtraText"
+        android:layout_width="match_parent">
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:weightSum="100"
+
+
+        >
 
 
         <EditText
@@ -31,14 +37,14 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="85"
             android:orientation="horizontal"
-
             />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/send"
-            android:layout_weight="20"
+            android:layout_weight="70"
+            />
 
 
     </LinearLayout>
