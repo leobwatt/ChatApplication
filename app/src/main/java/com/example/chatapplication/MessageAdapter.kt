@@ -18,7 +18,7 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
         if (viewType == 1) {
             //inflate receive
             val view: View = LayoutInflater.from(context).inflate(R.layout.receive, parent, false)
-            return receiveViewHolder(view)
+            return ReceiveViewHolder(view)
         }else{
             //inflate sent
             val view: View = LayoutInflater.from(context).inflate(R.layout.receive, parent, false)
@@ -40,7 +40,7 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
 
         } else {
             //do stuff for receive view holder
-            val viewHolder = holder as receiveViewHolder
+            val viewHolder = holder as ReceiveViewHolder
             holder.receiveMessage.text = currentMessage.message
         }
 
@@ -64,7 +64,7 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
         val sentMessage = itemView.findViewById<TextView>(R.id.sentMessage)
     }
 
-    class receiveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ReceiveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val receiveMessage = itemView.findViewById<TextView>(R.id.receiveMessage)
     }
 
