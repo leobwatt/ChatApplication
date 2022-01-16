@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MessageAdapter(val context: Context, val messageList: ArrayList<Message>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    val ITEM_receive = 1
+    val ITEM_RECEIVE = 1
     val ITEM_SENT = 2
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -35,7 +35,9 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
         if (holder.javaClass == SentViewHolder::class.java) {
             // do the stuff for sent view holder
             val viewHolder = holder as SentViewHolder
-            holder.sentMessage.text = currentMessage.message
+
+
+           //holder.sentMessage.text = currentMessage.message
 
 
         } else {
@@ -52,7 +54,7 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
         if (FirebaseAuth.getInstance().currentUser?.uid.equals(currentMessage.senderId)) {
             return ITEM_SENT
         } else {
-            return ITEM_receive
+            return ITEM_RECEIVE
         }
     }
 

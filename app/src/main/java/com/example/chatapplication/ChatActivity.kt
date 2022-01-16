@@ -1,13 +1,17 @@
 package com.example.chatapplication
 
+import android.app.Notification
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.textclassifier.ConversationActions
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -63,13 +67,13 @@ class ChatActivity : AppCompatActivity() {
                         messageList.add(message!!)
 
                     }
-                    //messageAdapter.notifyDataSetChanged()
+                      messageAdapter.notifyDataSetChanged()
 
 
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-
+                    Toast.makeText(this@ChatActivity, "Database Error", Toast.LENGTH_SHORT).show()
 
                 }
 
@@ -91,4 +95,5 @@ class ChatActivity : AppCompatActivity() {
         }
 
     }
+
 }
