@@ -26,8 +26,11 @@
         <entry key="app/src/main/res/layout/activity_message_menu.xml" value="0.17046605876393112" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/layout/login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/recieve.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/sent.xml" value="0.25" />
         <entry key="app/src/main/res/layout/signup.xml" value="0.5" />
         <entry key="app/src/main/res/layout/textmenu.xml" value="0.5911458333333334" />
+        <entry key="app/src/main/res/layout/user_layout.xml" value="0.1983695652173913" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3148148148148148" />
       </map>
