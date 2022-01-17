@@ -37,7 +37,7 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
             val viewHolder = holder as SentViewHolder
 
 
-           //holder.sentMessage.text = currentMessage.message
+           holder.sentMessage.text = currentMessage.message
 
 
         } else {
