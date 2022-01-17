@@ -70,11 +70,5 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
     class ReceiveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         //so is this
         val receiveMessage = itemView.findViewById<TextView>(R.id.receiveMessage)
-
     }
-/* I can't get recyclerview to scroll down
-    class RecycleScrollDown(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val recyclingIsGood = itemView.findViewById<RecyclerView>(R.id.chatRecyclerView)
-        recyclingIsGood.scrollToPosition(messageList.size - 1)
-    }   */
 }

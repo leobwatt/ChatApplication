@@ -4,24 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/btn_corners.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.2203125" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/message_box_background.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/drawable/profile_picture.xml" value="0.2203125" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_chat.xml" value="0.1" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/login.xml" value="0.22" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/receive.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/sent.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/signup.xml" value="0.12771739130434784" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/layout/user_layout.xml" value="0.12907608695652173" />
-        <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/1358992/AndroidStudioProjects/ChatApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_chat.xml" value="0.16" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/receive.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/1487500/AndroidStudioProjects/ChatApplication/app/src/main/res/layout/sent.xml" value="0.1" />
