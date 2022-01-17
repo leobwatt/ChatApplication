@@ -71,6 +71,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }
+
+        if(item.itemId == R.id.profile) {
+            //sends user to profile page
+            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
+
         return true
     }
 }
