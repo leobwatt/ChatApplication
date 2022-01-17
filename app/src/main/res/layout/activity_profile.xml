@@ -14,7 +14,7 @@
         android:textSize="40sp"
         android:textColor="@color/black"
         android:layout_marginTop="45dp"
-         android:layout_marginLeft="30dp">
+        android:layout_marginLeft="20dp">
     </TextView>
 
     <TextView
@@ -33,11 +33,32 @@
         android:layout_below="@+id/profile_name_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email:"
+        android:text="Email: "
         android:textSize="40dp"
         android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_toRightOf="@+id/profile_email_prompt"
+        android:layout_below="@id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(insert email)"
+        android:textSize="40sp"
+        android:textColor="@color/black"
         android:layout_marginTop="30dp">
     </TextView>
+
+    <Button
+        android:id="@+id/reset_password"
+        android:layout_below="@id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+    </Button>
 
 </RelativeLayout>
