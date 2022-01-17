@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApplication">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
@@ -26,7 +29,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
