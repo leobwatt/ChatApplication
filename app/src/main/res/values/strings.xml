@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChatApplication</string>
+    <string name="reset_password"><u>Reset Password</u></string>
 </resources>

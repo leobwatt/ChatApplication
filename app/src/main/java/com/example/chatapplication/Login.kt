@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import android.view.View.OnKeyListener
+import android.widget.TextView
 
 class Login : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class Login : AppCompatActivity() {
     private lateinit var edt_password: EditText
     private lateinit var btn_login: Button
     private lateinit var btn_sign_up: Button
+    private lateinit var reset_password: TextView
 
     private lateinit var mAuth: FirebaseAuth
 
@@ -33,6 +35,7 @@ class Login : AppCompatActivity() {
         edt_password = findViewById(R.id.edt_password)
         btn_login = findViewById(R.id.btn_login)
         btn_sign_up = findViewById(R.id.btn_sign_up)
+        reset_password = findViewById(R.id.reset_password)
 
         //if signup button is pressed, this will send user to sign up page
         btn_sign_up.setOnClickListener {
@@ -46,6 +49,12 @@ class Login : AppCompatActivity() {
             val password = edt_password.text.toString().trim()
 
             login(email, password)
+        }
+
+        reset_password.setOnClickListener() {
+            val intent = Intent(this@Login, ResetPasswordActivity::class.java)
+            finish()
+            startActivity(intent)
         }
 
         //enter key thingy (not done at all)
