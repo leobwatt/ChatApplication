@@ -4,6 +4,7 @@ import android.app.Notification
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.textclassifier.ConversationActions
@@ -80,9 +81,7 @@ class ChatActivity : AppCompatActivity() {
 
             })
 
-        //adding message to database
-        sendButton.setOnClickListener {
-
+        fun sendText () {
             val message = messageBox.text.toString()
             val messageObject = Message(message, senderUid)
 
@@ -93,6 +92,19 @@ class ChatActivity : AppCompatActivity() {
 
             messageBox.setText((""))
         }
+        //adding message to database
+        sendButton.setOnClickListener {
+
+           sendText()
+        }
+
+        messageBox.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                //Perform Code
+                sendText()
+            }
+            false
+        })
 
     }
 
