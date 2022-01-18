@@ -6,50 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-     <TextView
-        android:id="@+id/profile_name_prompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name: "
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp">
-    </TextView>
+    <ImageView
+        android:id="@+id/img_profile_logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+    </ImageView>
 
     <TextView
         android:id="@+id/profile_name"
-        android:layout_toRightOf="@id/profile_name_prompt"
+        android:layout_below="@+id/img_profile_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(insert name)"
+        android:text="Name"
         android:textSize="40sp"
         android:textColor="@color/black"
-        android:layout_marginTop="50dp">
-    </TextView>
-
-    <TextView
-        android:id="@+id/profile_email_prompt"
-        android:layout_below="@+id/profile_name_prompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email: "
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp">
     </TextView>
 
     <TextView
         android:id="@+id/profile_email"
-        android:layout_toRightOf="@+id/profile_email_prompt"
-        android:layout_below="@id/profile_name"
+        android:layout_below="@+id/profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(insert email)"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="40dp">
+        android:text="Email"
+        android:textSize="25dp"
+        android:textColor="@color/dark_grey"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
     </TextView>
 
 </RelativeLayout>
