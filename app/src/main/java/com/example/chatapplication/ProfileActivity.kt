@@ -26,7 +26,7 @@ class ProfileActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
 
         val ref = database.getReference("user").child(uid!!)
-
+/*
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // getting name from database
@@ -37,7 +37,7 @@ class ProfileActivity : AppCompatActivity() {
 
             }
         }
-
+*/
 
 
 /*
@@ -63,7 +63,7 @@ class ProfileActivity : AppCompatActivity() {
         supportActionBar?.title = "Profile"
 
         val profileName: TextView = findViewById(R.id.profile_name) as TextView
-        profileName.text = "$name"
+        //profileName.text = "$name"
 
 
         val profileEmail: TextView = findViewById(R.id.profile_email) as TextView

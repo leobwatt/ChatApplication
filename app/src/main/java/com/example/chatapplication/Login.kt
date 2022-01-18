@@ -52,7 +52,7 @@ class Login : AppCompatActivity() {
         }
 
         reset_password.setOnClickListener() {
-            val intent = Intent(this@Login, ResetPasswordActivity::class.java)
+            val intent = Intent(this@Login, ForgotPasswordActivity::class.java)
             finish()
             startActivity(intent)
         }
