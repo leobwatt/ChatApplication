@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var mDbRef: DatabaseReference
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +23,24 @@ class ProfileActivity : AppCompatActivity() {
         val email = FirebaseAuth.getInstance().currentUser?.email
 
         mDbRef = FirebaseDatabase.getInstance().getReference()
+        database = FirebaseDatabase.getInstance()
+
+        val ref = database.getReference("user").child(uid!!)
+
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // getting name from database
+                val name = dataSnapshot.getValue<ref>()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        }
 
 
+
+/*
         mDbRef.child("user").child(uid!!)
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -41,7 +58,7 @@ class ProfileActivity : AppCompatActivity() {
 
                 }
             })
-
+*/
 
         supportActionBar?.title = "Profile"
 
