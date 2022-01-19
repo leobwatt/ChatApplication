@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
+import com.example.chatapplication.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -18,37 +20,55 @@ class ProfileActivity : AppCompatActivity() {
 
     private lateinit var editButton: Button
     private lateinit var edtProfileName: EditText
-    private lateinit var edtProfileEmail: TextView
+    private lateinit var edtProfileEmail: EditText
+
+    private lateinit var name: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+
+
         auth = FirebaseAuth.getInstance()
+
+        val uid = auth.currentUser?.uid
+        val email = auth.currentUser?.email
 
         mDbRef = FirebaseDatabase.getInstance().getReference()
         database = FirebaseDatabase.getInstance()
 
-        editButton = findViewById(R.id.editButton)
-        edtProfileName = findViewById(R.id.edtProfileName)
-        edtProfileEmail = findViewById(R.id.edtProfileEmail)
+        editButton = findViewById(R.id.edit_button)
+        edtProfileName = findViewById(R.id.edt_profile_name)
+        edtProfileEmail = findViewById(R.id.edt_profile_email)
 
         supportActionBar?.title = "Profile"
 
-        val uid = auth.currentUser?.uid
-        val edtProfileEmail = auth.currentUser?.email
 
-        //var classUser = User()
+        fun getData(toGet: String) {
+            mDbRef.child("user").child(uid.toString()).get().addOnSuccessListener {
+                //val thingToGet = it.child(toGet).value.toString()
+                //name = it.child("name").value.toString()
+            }.addOnFailureListener {
 
-        //var edtProfileName = classUser.name
+            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+        }
+        getData(name)
 
-        //Toast.makeText(this@ProfileActivity, "$edtProfileName", Toast.LENGTH_SHORT).show()
+        edtProfileName.setText(name)
+        edtProfileEmail.setText(email)
 
 
+
+
+        /*
         editButton.setOnClickListener {
 
+            var edtProfileName = edtProfileName.toString()
+            var edtProfileEmail = edtProfileEmail.toString()
 
         }
-
+         */
     }
 }
