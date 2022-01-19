@@ -7,7 +7,7 @@
     tools:context=".ProfileActivity">
 
     <ImageView
-        android:id="@+id/img_profile_logo"
+        android:id="@+id/img_profile"
         android:layout_width="220dp"
         android:layout_height="220dp"
         android:src="@mipmap/ic_launcher_foreground"
@@ -15,9 +15,9 @@
         android:layout_marginTop="5dp">
     </ImageView>
 
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_below="@+id/img_profile_logo"
+    <EditText
+        android:id="@+id/edt_profile_name"
+        android:layout_below="@+id/img_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -26,11 +26,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp">
-    </TextView>
+    </EditText>
 
-    <TextView
-        android:id="@+id/profile_email"
-        android:layout_below="@+id/profile_name"
+    <EditText
+        android:id="@+id/edt_profile_email"
+        android:layout_below="@+id/edt_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
@@ -39,6 +39,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp">
-    </TextView>
+    </EditText>
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_below="@+id/edt_profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Edit"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp">
+    </Button>
 
 </RelativeLayout>
