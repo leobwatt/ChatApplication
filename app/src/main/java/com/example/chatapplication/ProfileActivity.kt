@@ -22,14 +22,18 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var edtProfileName: EditText
     private lateinit var edtProfileEmail: EditText
 
+    private lateinit var name: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val uid = auth.currentUser?.uid
-        val email = auth.currentUser?.email
+
 
         auth = FirebaseAuth.getInstance()
+
+        val uid = auth.currentUser?.uid
+        val email = auth.currentUser?.email
 
         mDbRef = FirebaseDatabase.getInstance().getReference()
         database = FirebaseDatabase.getInstance()
@@ -40,12 +44,23 @@ class ProfileActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Profile"
 
-        var classUser = User()
 
-        var edtProfileName = User().name
-        var edtProfileEmail = User().email
+        fun getData(toGet: String) {
+            mDbRef.child("user").child(uid.toString()).get().addOnSuccessListener {
+                //val thingToGet = it.child(toGet).value.toString()
+                //name = it.child("name").value.toString()
+            }.addOnFailureListener {
 
-        Toast.makeText(this@ProfileActivity, "$edtProfileName", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+        }
+        getData(name)
+
+        edtProfileName.setText(name)
+        edtProfileEmail.setText(email)
+
+
+
 
         /*
         editButton.setOnClickListener {
