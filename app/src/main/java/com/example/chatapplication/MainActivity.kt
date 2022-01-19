@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
                     if(mAuth.currentUser?.uid != currentUser?.uid) {
                         userList.add(currentUser!!)
-
+                    }
 
 
                 }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
-    }
+        }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
