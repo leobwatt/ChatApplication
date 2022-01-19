@@ -61,9 +61,9 @@ class ProfileActivity : AppCompatActivity() {
 */
 
         supportActionBar?.title = "Profile"
-
+        name = intent.getStringArrayListExtra("username")
         val profileName: TextView = findViewById(R.id.profile_name) as TextView
-        //profileName.text = "$name"
+        profileName.text = "$name"
 
 
         val profileEmail: TextView = findViewById(R.id.profile_email) as TextView

@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
+    public lateinit var username: String
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userList: ArrayList<User>
     private lateinit var adapter: UserAdapter
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         userRecyclerView.layoutManager = LinearLayoutManager(this)
         userRecyclerView.adapter = adapter
 
+
         mDbRef.child("user").addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
                     if(mAuth.currentUser?.uid != currentUser?.uid) {
                         userList.add(currentUser!!)
-                    }
+
 
 
                 }
@@ -82,3 +84,5 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 }
+
+
