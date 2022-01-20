@@ -16,7 +16,7 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/edt_profile_name"
+        android:id="@+id/edtProfileName"
         android:layout_below="@+id/img_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,9 +28,9 @@
         android:layout_marginLeft="20dp">
     </EditText>
 
-    <EditText
-        android:id="@+id/edt_profile_email"
-        android:layout_below="@+id/edt_profile_name"
+    <TextView
+        android:id="@+id/edtProfileEmail"
+        android:layout_below="@+id/edtProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
@@ -39,11 +39,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp">
-    </EditText>
+    </TextView>
 
     <Button
-        android:id="@+id/edit_button"
-        android:layout_below="@+id/edt_profile_email"
+        android:id="@+id/editButton"
+        android:layout_below="@+id/edtProfileEmail"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Edit"
