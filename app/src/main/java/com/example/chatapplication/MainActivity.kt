@@ -11,7 +11,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
-    public lateinit var username: String
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userList: ArrayList<User>
     private lateinit var adapter: UserAdapter
@@ -74,16 +73,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity,Login::class.java)
             finish()
             startActivity(intent)
-            return true
         }
-
-        if(item.itemId == R.id.profile) {
-            //sends user to profile page
-            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
-            finish()
-            startActivity(intent)
-        }
-
         return true
     }
 }

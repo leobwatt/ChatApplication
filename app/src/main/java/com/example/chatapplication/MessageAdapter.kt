@@ -14,14 +14,6 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
     val ITEM_RECEIVE = 1
     val ITEM_SENT = 2
 
-    /*
-    val llm = LinearLayoutManager(this)
-
-    private fun LinearLayoutManager(messageAdapter: MessageAdapter) {
-        llm.setReverseLayout(true)
-    }
-    */
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         if (viewType == 1) {
