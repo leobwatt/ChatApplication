@@ -29,7 +29,6 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
 
-
         auth = FirebaseAuth.getInstance()
 
         val uid = auth.currentUser?.uid
