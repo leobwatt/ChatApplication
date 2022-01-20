@@ -35,7 +35,7 @@ class ProfileActivity : AppCompatActivity() {
         val uid = auth.currentUser?.uid
         val email = auth.currentUser?.email
 
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef = FirebaseDatabase.getInstance().getReference("user")
         database = FirebaseDatabase.getInstance()
 
         editButton = findViewById(R.id.edit_button)
@@ -46,17 +46,31 @@ class ProfileActivity : AppCompatActivity() {
 
 
         fun getData(toGet: String) {
-            mDbRef.child("user").child(uid.toString()).get().addOnSuccessListener {
-                //val thingToGet = it.child(toGet).value.toString()
-                //name = it.child("name").value.toString()
-            }.addOnFailureListener {
+            mDbRef.child(uid!!).get().addOnSuccessListener {
 
-            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                if (it.exists()){
+                    Toast.makeText(this,"Successfully Read",Toast.LENGTH_SHORT).show()
+                    //val thingToGet = it.child(toGet).value.toString()
+                    //name = it.child("name").value.toString()
+
+                }else{
+
+                    Toast.makeText(this,"User Doesn't Exist",Toast.LENGTH_SHORT).show()
+
+
+                }
+
+            }.addOnFailureListener{
+
+                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
+
+
             }
         }
+        Toast.makeText(this,"$uid",Toast.LENGTH_SHORT).show()
         getData(name)
 
-        edtProfileName.setText(name)
+        //edtProfileName.setText(name)
         edtProfileEmail.setText(email)
 
 
