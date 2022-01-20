@@ -44,6 +44,9 @@ class MainActivity : AppCompatActivity() {
 
                     if(mAuth.currentUser?.uid != currentUser?.uid) {
                         userList.add(currentUser!!)
+                    } else {
+                        intent.putExtra("name", currentUser?.name)
+
                     }
 
 

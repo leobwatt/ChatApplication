@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chatapplication.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -37,9 +36,9 @@ class ProfileActivity : AppCompatActivity() {
         mDbRef = FirebaseDatabase.getInstance().getReference("user")
         database = FirebaseDatabase.getInstance()
 
-        editButton = findViewById(R.id.edit_button)
-        edtProfileName = findViewById(R.id.edt_profile_name)
-        edtProfileEmail = findViewById(R.id.edt_profile_email)
+        editButton = findViewById(R.id.editButton)
+        edtProfileName = findViewById(R.id.edtProfileName)
+        edtProfileEmail = findViewById(R.id.edtProfileEmail)
 
         supportActionBar?.title = "Profile"
 

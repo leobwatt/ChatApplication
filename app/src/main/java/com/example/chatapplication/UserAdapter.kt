@@ -16,8 +16,6 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>): Recycler
         val view: View = LayoutInflater.from(context).inflate(R.layout.user_layout, parent, false)
         return UserViewHolder(view)
 
-
-
     }
 
 
