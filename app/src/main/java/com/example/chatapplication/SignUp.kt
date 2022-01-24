@@ -30,7 +30,7 @@ class SignUp : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        //renames the variables for some reason
+        //renames all the variables for some reason
         edt_name = findViewById(R.id.edt_name)
         edt_email = findViewById(R.id.edt_email)
         edt_password = findViewById(R.id.edt_password)
